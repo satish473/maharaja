@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Web page </title>
+		<link rel="stylesheet" href="style.css">
+		
+	</head>
+	<body>
+		<script>
+			
+			var sellerData ={
+				sellerName: 'Indian Electronics',
+				sellerLocation: 'New Delhi',
+				sellerRating: '8.4/10'
+			}
+			var product1 = {
+				name: 'laptop',
+				price: '$200',
+				menu: 'Samsung',
+			/*	sellerName: 'Indian Electronics',
+				sellerLocation: 'New Delhi',
+				sellerRating: '8.4/10',*/
+				displayProductData: function(){ 
+					console.log("Product 1 Data");
+					console.log("product name " + this.name);
+					console.log("Price " + this.price);
+					console.log("seller name " + this.sellerName);
+console.log("seller Location " + this.sellerLocation);
+console.log("seller Rating " + this.sellerRating);
+					
+				}
+			}
+			product1.__proto__= sellerData;
+			
+			var product2 = {
+				name: 'Phone',
+				price: '$300',
+				menu: 'i-Phone11',
+			/*	sellerName: 'Indian Electronics',
+				sellerLocation: 'New Delhi',
+				sellerRating: '8.4/10', */
+				displayProductData: function(){
+					console.log("Product 2 Data");
+					console.log("product name " + this.name);
+					console.log("Price " + this.price);
+					console.log("seller name " + this.sellerName);
+console.log("seller Location " + this.sellerLocation);
+console.log("seller Rating " + this.sellerRating);
+					
+				}
+			}
+			product2.__proto__=sellerData;
+		console.log(product1);
+		
+			product1.displayProductData();
+			product2.displayProductData();
+		</script>
+	
+	</body>
+	
+</html>

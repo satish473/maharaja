@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Web page </title>
+		<link rel="stylesheet" href="style.css">
+		
+	</head>
+	<body>
+		<ul>
+			<li><h4 style="text-align:center;">ABC School Registration Page</h4></li>
+			<li>Enter Student Name: <input type="text" id="sname" /></li>
+			<li>Enter Student Age: <input type="text" id="sage" /></li>
+			<li>
+				Country:
+				<select id="scountry">
+					<option>India</option>
+					<option>USA</option>
+					<option>Japan</option>
+				</select>
+			</li>
+			<li><input type="button" value="Register" onclick="doRegister()" /></li>
+		</ul>		
+		<script>
+			//function doRegister(){
+				var schooData = {
+					collegeName: "ABC College",
+					loc: "Delhi",
+					rating: "9/10"
+				}
+				//var sData = {};
+			function doRegister(){	
+				var sData = Object.create(schoolData);
+				
+				sData.name = document.querySelector("#sname").value;
+				sData.age = document.querySelector("#sage").value;
+				sData.country = document.querySelector("#scountry").value;				
+					sData.displayData = function(){
+						console.log("Student Name is: " + this.name); 
+						console.log("Student Age is: " + this.age); 
+						console.log("Student Country is: " + this.country); 
+						console.log("student College is: " + this.collegeName);
+						console.log("College Location is: " + this.loc);
+						console.log("College rating is: " + this.rating);
+						
+					}
+					sData.displayData();
+					
+				}
+					
+			//}
+		</script>
+	
+	</body>
+	
+</html>
